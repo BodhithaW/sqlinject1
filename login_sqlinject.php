@@ -14,7 +14,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username_input = $_POST['username'];
     $password_input = $_POST['password'];
 
-    // VULNERABLE SQL QUERY - DO NOT USE IN PRODUCTION
     $sql = "SELECT * FROM test_users WHERE username = '$username_input' AND password = '$password_input'";
 
     echo "SQL Query: " . $sql . "<br>";
